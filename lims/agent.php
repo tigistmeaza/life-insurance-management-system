@@ -88,13 +88,14 @@ tr:nth-child(even) {
 
 include'connection.php';
 	
-	$sql = "SELECT agent_id,agent_password,name,branch,phone FROM agent";
+	$sql = "SELECT agent_id,agent_password,fname,Lname,branch,phone FROM agent";
 	$result = $conn->query($sql);
 	
 	echo "<table class=\"table\">\n";
     echo "  <tr>\n";
     echo "    <th>AGENT ID</th>\n";
-    echo "    <th>NAME</th>\n";
+    echo "    <th>fNAME</th>\n";
+    echo "    <th>LNAME</th>\n";
     echo "    <th>BRANCH</th>\n";
     echo "    <th>PHONE</th>\n";
 	if ($_SESSION["username"]=="ahmed") {
@@ -109,7 +110,8 @@ include'connection.php';
 		
 		echo "<tr>\n";
 		echo "    <td>".$row["agent_id"]."</td>\n";
-		echo "    <td>".$row["name"]."</td>\n";
+		echo "    <td>".$row["fname"]."</td>\n";
+        echo "    <td>".$row["lname"]."</td>\n";
 		echo "    <td>".$row["branch"]."</td>\n";
 		echo "    <td>".$row["phone"]."</td>\n";
 		if ($_SESSION["username"]=="ahmed") {
