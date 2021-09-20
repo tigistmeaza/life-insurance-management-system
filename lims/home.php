@@ -80,7 +80,7 @@ tr:nth-child(even) {
             
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="page-head-line">Home Page
+                        <h1 class="page-head-line">Life Insurance Management System
 						
 						</h1>
 
